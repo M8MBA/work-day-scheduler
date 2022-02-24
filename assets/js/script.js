@@ -37,13 +37,13 @@ function clickHandler() {
 $(".saveBtn").click(clickHandler)
 
 // retrieve & display text
-$("#x1").val(localStorage.getItem("x1"))
-$("#x2").val(localStorage.getItem("x2"))
-$("#x3").val(localStorage.getItem("x3"))
-$("#x4").val(localStorage.getItem("x4"))
-$("#x5").val(localStorage.getItem("x5"))
-$("#x6").val(localStorage.getItem("x6"))
-$("#x7").val(localStorage.getItem("x7"))
-$("#x8").val(localStorage.getItem("x8"))
-$("#x9").val(localStorage.getItem("x9"))
+$("#9AM").val(localStorage.getItem("9AM"))
+$("#10AM").val(localStorage.getItem("10AM"))
+$("#11AM").val(localStorage.getItem("11AM"))
+$("#12PM").val(localStorage.getItem("12PM"))
+$("#1PM").val(localStorage.getItem("1PM"))
+$("#2PM").val(localStorage.getItem("2PM"))
+$("#3PM").val(localStorage.getItem("3PM"))
+$("#4PM").val(localStorage.getItem("4PM"))
+$("#5PM").val(localStorage.getItem("5PM"))
 
