@@ -3,9 +3,9 @@ var dateTime = function () {
   var currentDay = document.getElementById("currentDay");
   var time = moment();
 
-    currentDay.textContent = time.format("dddd, MMMM Do YYYY, h:mm a");
+    currentDay.textContent = time.format("dddd, MMMM Do YYYY, h:mm:ss a");
 
-    setInterval(function () { dateTime(); }, 60000);
+    setInterval(function () { dateTime(); }, 1000);
 
 }
 
@@ -28,40 +28,24 @@ $('.time-block').each(function () {
 
 });
 
-var storage = JSON.parse(localStorage.getItem("reminders")) || {};
-
-//create a object loop that will take the key and assign the value of the key to the corresponding id of the textarea
-for (var [key, value] of Object.entries(storage)) {
-  var textArea = document.getElementById(key)
-  localStorage.getItem(key)
-  textArea.innerHTML = value
+// save text input to the local storage
+function clickHandler() {
+  var data = $(this).siblings("textarea");
+  var userInput = data.val();
+  var id = data.attr("id");
+  localStorage.setItem(id, userInput);
 };
 
+$(".saveBtn").click(clickHandler)
 
-// this works only partially doesn;t save when refreshed
-//event listener for saving button on reminders
-$('.saveBtn').each(function(){
-  $(this).on('click', function(event) {
-    // click the save button for that time block, text for that event is saved in local storage
-    var dataObject = ('description')
+// retrieve & display text
+$("#x1").val(localStorage.getItem("x1"))
+$("#x2").val(localStorage.getItem("x2"))
+$("#x3").val(localStorage.getItem("x3"))
+$("#x4").val(localStorage.getItem("x4"))
+$("#x5").val(localStorage.getItem("x5"))
+$("#x6").val(localStorage.getItem("x6"))
+$("#x7").val(localStorage.getItem("x7"))
+$("#x8").val(localStorage.getItem("x8"))
+$("#x9").val(localStorage.getItem("x9"))
 
-    // Set localStorage item
-    localStorage.setItem('description', JSON.stringify(dataObject));
-
-    // Retrieve the object from localStorage
-    var retrievedObject = localStorage.getItem('description');
-
-    // console.log retrieved item
-    console.log('retrieved data Object: ', JSON.parse(retrievedObject));
-  })
-});
-
-
-
-
-
-//     var id = "x" + event.target.id
-//    var reminders = $('#'+ id).val();
-//    storage[id] = reminders
-//    localStorage.setItem("reminders", JSON.stringify(storage));
-//      console.log("reminder was saved")
