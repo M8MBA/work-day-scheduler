@@ -14,9 +14,7 @@ dateTime();
 // each time block is color-coded to indicate whether it is in the past, present, or future
 $('.time-block').each(function () {
   var time = $(this).data('time')
-  console.log(time)
   var current = moment().hours()
-  console.log(current)
 
   if (current < time) {
     $(this).children('.reminders').addClass('future')
