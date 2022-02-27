@@ -16,6 +16,7 @@ user refreshes the page they do not lose thier input.
 
 
 ## Website
+https://m8mba.github.io/work-day-scheduler/
 
 ## Contribution
 Made with ❤️ by Cade Wilson
